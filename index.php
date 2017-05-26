@@ -1,13 +1,9 @@
 <?php
 
-require_once '/Volumes/Macintosh HD2/project/php/phpsample/vendor/sentry/sentry/lib/Raven/Autoloader.php';
+require_once './vendor/sentry/sentry/lib/Raven/Autoloader.php';
 Raven_Autoloader::register();
 
-$client = new Raven_Client('somecode');
-$error_handler = new Raven_ErrorHandler($client);
-$error_handler->registerExceptionHandler();
-$error_handler->registerErrorHandler();
-$error_handler->registerShutdownFunction();
+$ravenClient = new Raven_Client('');
 /**
  * CodeIgniter
  *
